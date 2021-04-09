@@ -1,6 +1,9 @@
 # <Project Name> GitIgnore
 # Created by https://www.gitignore.io/api/c++,cmake,emacs,intellij,linux,osx
 
+# VSCode 
+.vscode
+
 # Build -----------------------------------------------------------------------
 
 ### Output and Cache Directories ###
