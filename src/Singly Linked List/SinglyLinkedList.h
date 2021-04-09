@@ -38,6 +38,31 @@ public:
         size++;
     }
 
+    void addAt(const T &value, const size_t &idx) {
+        // Making sure the given index is in bounds.
+        if (idx >= getSize()) {
+            std::cout << "Index provided is out of bounds" << std::endl;
+            return;
+        }
+        size_t counter = 0;
+        for (Node *tmp = head;;) {
+            // The index to be inserted at
+            if (counter == (idx - 1)) {
+                // Previous next pointer
+                Node *tmpPrev = tmp->m_next;
+                // Setting next pointer to the newly created Node.
+                tmp->m_next = new Node(value, nullptr);
+                // Setting the next's next pointer to the previous next pointer of the current Node.
+                tmp->m_next->m_next = tmpPrev;
+
+                break;
+            }
+            tmp = tmp->m_next;
+        }
+        size++;
+
+    }
+
     /**
      * @brief Gets the size of the LinkedList
      *
