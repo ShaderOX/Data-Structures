@@ -1,21 +1,15 @@
 #include <iostream>
+#include <cmath>
 #include <SinglyLinkedList.h>
+#include <Vector.h>
 
 int main() {
-    LinkedList<int> ll;
+    Vector<int> vector(5);
+    for (int i = 0; i < 25; i++) {
+        vector.append(pow(i, 2));
+    }
 
-    ll.add(10);
-    ll.add(14);
-    ll.add(12);
-    std::cout << ll.getSize() << std::endl;
-    std::cout << ll << std::endl;
-
-    ll.add(1);
-    ll.remove(10);
-    ll.add(13);
-    std::cout << ll.getSize() << std::endl;
-    std::cout << ll << std::endl;
-
-    std::cout << ll.contains(99) << std::endl;
-    std::cout << ll.indexOf(99) << std::endl;
+    std::cout << vector << std::endl;
+    std::cout << vector.getSize() << std::endl;
+    std::cout << vector[24] << std::endl;
 }
