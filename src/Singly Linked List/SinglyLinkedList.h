@@ -13,7 +13,7 @@ private:
     };
 
     Node *head = nullptr;   // Holds the pointer to the head of linked list
-    size_t size = 0;      // Holds the length of Nodes in the LinkedList
+    size_t size = 0;        // Holds the length of Nodes in the LinkedList
 public:
     /**
      * @brief Adds the a Node to the end of the LinkedList.
